@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f5f5f5;
+    padding: 82px 124px;
+    padding-right: 33px;
+    font-size: 18px;
+}
+
+h1 {
+    font-family: "Roboto Slab", serif;
+    font-size: 55px;
+    margin-bottom: 78px;
+}
+
+.main-text {
+    grid-area: main-text;
+    padding-left: 6px;
+    padding-right: 40px;
+}
+
+.main-text p {
+    line-height: 36px;
+    font-size: 24px;
+}
+
+.main-text p:nth-of-type(2) {
+    margin-top: 36px;
+}
+
+.camera1 {
+    grid-area: camera1;
+    justify-self: right;
+    margin-top: 5px;
+    align-self: center;
+}
+
+.camera2 {
+    grid-area: camera2;
+    align-self: center;
+}
+
+.small-text {
+    grid-area: small-text;
+    display: flex;
+    gap: 80px;
+    flex-wrap: wrap;
+    align-self: center;
+    padding-top: 20px;
+}
+
+.small-text div {
+    width: 22%;
+}
+
+h3 {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+main {
+    display: grid;
+    row-gap: 48px;
+    column-gap: 135px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas:
+        "main-text main-text main-text  camera1 camera1"
+        "camera2 small-text small-text small-text small-text";
+}
+
+
+/* Tablet */
+
+@media screen and (min-width: 601px) and (max-width: 991px) {
+
+    body {
+        padding: 82px;
+    }
+
+    main {
+        column-gap: 10px;
+        grid-template-areas:
+            "main-text main-text main-text  camera1 camera1"
+            "small-text small-text small-text small-text small-text";
+    }
+
+    .camera2 {
+        display: none;
+    }
+
+    .camera1 {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    .main-text p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .main-text p:nth-of-type(2) {
+        margin-top: 20px;
+    }
+
+    .main-text {
+        padding-left: 2px;
+        padding-right: 30px;
+    }
+
+    h3 {
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+
+    .small-text p {
+        font-size: 11px;
+    }
+
+    .small-text {
+        gap: 50px
+    }
+
+    .small-text div {
+        width: 15%;
+    }
+
+}
+
+
+
+
+/* Mobile */
+
+@media screen and (max-width: 600px) {
+
+    body {
+        padding: 40px;
+    }
+
+    main {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "main-text main-text main-text"
+            "camera1 camera1 camera1"
+            "small-text small-text .";
+    }
+
+    .camera2 {
+        display: none;
+    }
+
+    .camera1 {
+        width: 50%;
+        justify-self: center;
+    }
+
+    h1 {
+        font-size: 26px;
+        margin-bottom: 30px;
+    }
+
+    .main-text p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .main-text p:nth-of-type(2) {
+        margin-top: 20px;
+    }
+
+    .main-text {
+        padding-left: 2px;
+        padding-right: 0px;
+    }
+
+    h3 {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    .small-text p {
+        font-size: 10px;
+    }
+
+    .small-text {
+        gap: 50px
+    }
+
+    .small-text div {
+        width: 30%;
+    }
+
+}
