@@ -78,10 +78,10 @@ main {
 
 /* Tablet */
 
-@media screen and (min-width: 601px) and (max-width: 991px) {
+@media screen and (max-width: 830px) {
 
     body {
-        padding: 82px;
+        padding: 30px;
     }
 
     main {
@@ -96,7 +96,7 @@ main {
     }
 
     .camera1 {
-        width: 90%;
+        width: 95%;
     }
 
     h1 {
@@ -142,7 +142,7 @@ main {
 
 /* Mobile */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 375px) {
 
     body {
         padding: 40px;
